@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui_MainDialog.ui'
+# Form implementation generated from reading ui file 'ui_maindialog.ui'
 #
-# Created: Mon May 26 16:55:44 2014
-#      by: PyQt4 UI code generator 4.9.6
+# Created: Thu Jun 19 10:23:10 2014
+#      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -28,7 +28,7 @@ class Ui_MainDialog(object):
         MainDialog.setObjectName(_fromUtf8("MainDialog"))
         MainDialog.resize(994, 736)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/plugins/ol3/icons/ol.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/plugins/qgis2ol/icons/ol.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainDialog.setWindowIcon(icon)
         self.verticalLayout_3 = QtGui.QVBoxLayout(MainDialog)
         self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
@@ -82,7 +82,7 @@ class Ui_MainDialog(object):
         self.horizontalLayout_2.addItem(spacerItem)
         self.buttonUpdateOL = QtGui.QPushButton(self.widget)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/plugins/MainDialog/icons/preview.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/plugins/qgis2ol/icons/preview.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.buttonUpdateOL.setIcon(icon1)
         self.buttonUpdateOL.setObjectName(_fromUtf8("buttonUpdateOL"))
         self.horizontalLayout_2.addWidget(self.buttonUpdateOL)
