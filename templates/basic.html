@@ -161,15 +161,23 @@
         }
         var pixel = map.getEventPixel(evt.originalEvent);
         var coord = evt.coordinate;
-        var popupText;
+        var popupField;
+        var popupText = '';
         var currentFeature;
+        var currentFeatureKeys;
         map.forEachFeatureAtPixel(pixel, function(feature, layer) {
           currentFeature = feature;
+          currentFeatureKeys = currentFeature.getKeys();
           var field = popupLayers[layersList.indexOf(layer) - 1];
           if (field == NO_POPUP){          
           }
           else if (field == ALL_FIELDS){
-            //TODO
+            for ( var i=0; i<currentFeatureKeys.length;i++) {
+                if (currentFeatureKeys[i] != 'geometry') {
+                    popupField = currentFeatureKeys[i] + ': '+ currentFeature.get(currentFeatureKeys[i]);
+                    popupText = popupText + popupField+'<br>';
+                }
+            }
           }
           else{
             var value = feature.get(field);
