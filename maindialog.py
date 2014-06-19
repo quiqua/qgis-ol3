@@ -104,8 +104,8 @@ class MainDialog(QDialog, Ui_MainDialog):
 			reply = QtGui.QMessageBox.question(self, "OL3 map correctly exported",
                 "Do you want to open the resulting map in a web browser?",
                 QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
-        	if reply == QtGui.QMessageBox.Yes:
-        		webbrowser.open_new_tab(os.path.join(folder, "index.html")) 
+			if reply == QtGui.QMessageBox.Yes:
+				webbrowser.open_new_tab(os.path.join(folder, "index.html")) 
             
 
 
