@@ -101,10 +101,10 @@ class MainDialog(QDialog, Ui_MainDialog):
 			layers, groups, popup, visible = self.getLayersAndGroups()
 			params = self.getParameters()
 			writeOL(layers, groups, popup, visible, params, folder)
-			reply = QtGui.QMessageBox.question(self, "OL3 map correctly exported",
+			reply = QMessageBox.question(self, "OL3 map correctly exported",
                 "Do you want to open the resulting map in a web browser?",
-                QtGui.QMessageBox.Yes | QtGui.QMessageBox.No)
-			if reply == QtGui.QMessageBox.Yes:
+                QMessageBox.Yes | QMessageBox.No)
+			if reply == QMessageBox.Yes:
 				webbrowser.open_new_tab(os.path.join(folder, "index.html")) 
             
 
