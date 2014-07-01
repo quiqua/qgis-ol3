@@ -87,8 +87,7 @@ def exportLayers(layers, folder, precision, optimize, popupField):
             if not path.lower() in envval.lower().split(os.pathsep):
                 envval += '%s%s' % (os.pathsep, path)
                 os.putenv('PATH', envval)
-            command = ''.join([])
-            proc = subprocess.Popen(
+            subprocess.Popen(
                 ['gdal_translate -of JPEG -a_srs EPSG:3857 %s %s' % (orgFile, destFile)],
                 shell=True,
                 stdout=subprocess.PIPE,
@@ -99,4 +98,6 @@ def exportLayers(layers, folder, precision, optimize, popupField):
             
 
 def safeName(name):
-    return name.replace(" ", "")                
+    #TODO: we are assuming that at least one character is valid...
+    validChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    return ''.join(c for c in name if c in validChars)    
